@@ -7,7 +7,141 @@
     <title>Document</title>
 </head>
 <body>
-   <p>This is my website welcome to my website</p> 
-   <p>The Internet, sometimes called simply "the Net," is a worldwide system of computer networks -- a network of networks in which users at any one computer can, if they have permission, get information from any other computer (and sometimes talk directly to users at other computers).</p>
+  
+  <button onclick="setData()">set Data</button>
+  <button onclick="getdata()">get Data</button>
+
+<script>
+     
+
+let num= add(Hello,Nimra);
+
+let arr = [5, 6, 7, 8, 9, 10, 1, 2, 3];
+    X=8;
+    Key =3;
+
+function arr() {
+       if( key===8){
+console.log(True);
+}   else(key != 8){
+    console.log(False);{
+}
+ }
+}
+
+//
+let  myObject = {
+  name : "Nimra Shaikh",
+  age : 18,
+  gender : "Female",
+  profession : "Student" 
+}
+
+localStorage.setItem("myObject", JSON.stringify(myObject));
+
+
+//
+function para( ){
+   document.write("JavaScript is a multi-paradigm, dynamic language with types and operators, standard built-in objects, and methods. Its syntax is based on the Java and C languages — many structures from those languages apply to JavaScript as well.");
+
+ }
+ var testObj = { 'one': 1, 'two': 2, 'three': 3 };
+
+console.log('typeof testObj: ' + typeof testObj);
+
+console.log('testObj properties:');
+for (var prop in testObj) {
+    console.log('  ' + prop + ': ' + testObj[prop]);
+}
+
+
+localStorage.setItem('testObj', testObj);
+
+
+var retrievedObj = localStorage.getItem('testObj');
+
+console.log('typeof retrievedObj: ' + typeof retrievedObj);
+
+console.log('Value of retrievedObj: ' + retrievedObj);
+
+
+//
+function sayNimra() {
+  var  say = function() { console.log(Nimra); }
+  // Local variable that ends up within the closure 
+  var Nimra = 'Nimra, Shaikh!';
+  return say;
+}
+let  sayNimraClosure = sayNimra(); 
+sayNimraClosure(); 
+
+
+//
+var sayHelloClosure = sayHello(); 
+sayHelloClosure(); 
+
+
+let key = prompt("Enter key you want to set");
+ let Value = prompt("Enter Value you want to set");
+ localStorage.setItem(key, Value);
+ console.log(key, Value);
+
+// 
+let local = localStorage;
+setData = () => {
+    let data={
+    "firstname" :"Saina",
+    "lastname" : "Ansari",
+    "age" : "29",
+};
+local.setItem('user-info', JSON.stringify(data));
+}
+//
+getdata=() => {
+    let data = local.getItem('user-info');
+    data = JSON.parse(data);
+    console.log(data);
+    console.log(typeof(data));
+} 
+
+
+//
+
+var fees ={
+    Mishal:"100",
+     BismaNaz:"200",
+      Muskan:"300",
+       Sajida:"400",
+    };
+console.log(fees);
+
+
+///
+
+let yourpara=document.querySelector("#your-para");
+     yourpara.innerHTML = "<b>This is my website</b>";
+     console.log(yourpara);
+
+yourpara.style.backgroundColor = "#800000";
+yourpara.style.color = "#fff";
+setInterval(function(){
+ 
+   yourpara.style.width ="100%"
+   console.log(yourpara.style.width);
+   yourpara.style.display="none";
+    }, 500);
+
+ let mypara = document.getElementById("my-para");
+ mypara.innerHTML = "<b>Welcome to my  website</b>";
+ setInterval(function(){
+    let color1 = Math.floor(Math.random()*16777215).toString(16);
+    let color2 = Math.floor(Math.random()*16777215).toString(16);
+    console.log(color1,color2);
+    mypara.style.backgroundColor = "#" + color1;
+mypara.style.color = "#" + color2;
+ }, 500)
+
+</script>
+
 </body>
 </html>
